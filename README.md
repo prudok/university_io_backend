@@ -1,12 +1,44 @@
-# university_io_backend
+# Учебный администрационно-аналитический портал (Backend)
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
-[![License: MIT][license_badge]][license_link]
-[![Powered by Dart Frog](https://img.shields.io/endpoint?url=https://tinyurl.com/dartfrog-badge)](https://dartfrog.vgv.dev)
+Этот репозиторий содержит backend часть проекта [Учебного администрационно-аналитического портала](https://github.com/rel1nce/university_io). Разработанный портал предоставляет администраторам учебных заведений и аналитикам возможности для управления и анализа данных о студентах, преподавателях, расписании и других аспектах образовательного процесса.
 
-An example application built with dart_frog
+## Используемые технологии
 
-[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license_link]: https://opensource.org/licenses/MIT
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
+* Backend часть портала написана на языке Dart с использованием фреймворка [Dart Frog](https://dartfrog.vgv.dev/) <br>
+* В качестве базы данных используется [Drift](https://pub.dev/packages/drift)
+
+## Установка и настройка
+
+1. Склонируйте данный репозиторий на ваше устройство.
+2. Убедитесь, что у вас установлен [Dart](https://dart.dev/) и [Dart Frog](https://dartfrog.vgv.dev/).
+3. Установите необходимые зависимости, запустив `flutter pub get`.
+4. Выполните миграции для создания необходимых таблиц в базе данных, используя команду <br> `flutter packages pub run build_runner build --delete-conflicting-outputs`.
+5. Запустите backend сервер, используя команду `dart bin/main.dart`.
+
+## API Endpoints
+
+### /students
+- GET: Получение списка всех студентов.
+- POST: Создание нового студента.
+
+### /students/{id}
+- GET: Получение информации о студенте по заданному идентификатору.
+- PUT: Обновление информации о студенте по заданному идентификатору.
+- DELETE: Удаление студента по заданному идентификатору.
+
+### /teachers
+- GET: Получение списка всех преподавателей.
+- POST: Создание нового преподавателя.
+
+### /teachers/{id}
+- GET: Получение информации о преподавателе по заданному идентификатору.
+- PUT: Обновление информации о преподавателе по заданному идентификатору.
+- DELETE: Удаление преподавателя по заданному идентификатору.
+
+### /schedule
+- GET: Получение расписания занятий.
+
+И другие запросы.
+
+## Авторы
+- Roman Prudchenko - https://t.me/rel1nce
