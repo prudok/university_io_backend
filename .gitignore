@@ -8,6 +8,11 @@
 .packages
 pubspec.lock
 
+# Generated files
+*.freezed.dart
+*.g.dart
+*.generated.dart
+
 # Files and directories created by dart_frog
 build/
 .dart_frog
