@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:path/path.dart' as path;
-import 'package:path_provider/path_provider.dart';
 import 'package:university_io_backend/tables/tables.dart';
 
 part 'university_db.g.dart';
@@ -67,8 +66,8 @@ class UniversityDatabase extends _$UniversityDatabase {
 
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {
-    final dbFolder = await getApplicationDocumentsDirectory();
-    final file = File(path.join(dbFolder.path, 'people.sqlite'));
+    final dbFolder = Directory('university_project');
+    final file = File(path.join(dbFolder.path, 'db.sqlite'));
     return NativeDatabase.createInBackground(file);
   });
 }
