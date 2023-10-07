@@ -3,7 +3,10 @@ analyzer:
   exclude:
     - build/**
     - '**.g.dart'
+    - '**.config.dart'
+    - '*.generated.dart'
 linter:
   rules:
     file_names: false
     public_member_api_docs: false
+    lines_longer_than_80_chars: false

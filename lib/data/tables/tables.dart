@@ -1,4 +1,5 @@
 //GENERATED BARREL FILE
+export 'book.dart';
 export 'department_teacher_link.dart';
 export 'departments.dart';
 export 'events.dart';
