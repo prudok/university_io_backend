@@ -6,4 +6,5 @@ class Teachers extends Table {
   TextColumn get lastName => text()();
   TextColumn get email => text()();
   TextColumn get gender => text()();
+  TextColumn get departmentId => integer()();
 }
