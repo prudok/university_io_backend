@@ -2,5 +2,5 @@ import 'package:drift/drift.dart';
 
 class Marks extends Table {
   IntColumn get id => integer().autoIncrement()();
-  TextColumn get grade => integer()();
+  IntColumn get grade => integer()();
 }
