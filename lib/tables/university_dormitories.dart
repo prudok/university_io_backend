@@ -1,7 +1,7 @@
 import 'package:drift/drift.dart';
 
-class Departments extends Table {
+class UniversityDormitories extends Table {
   IntColumn get id => integer().autoIncrement()();
   TextColumn get name => text()();
-  IntColumn get headId => integer()();
+  TextColumn get address => text()();
 }
