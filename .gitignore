@@ -12,6 +12,7 @@ pubspec.lock
 *.freezed.dart
 *.g.dart
 *.generated.dart
+*.config.dart
 
 # Files and directories created by dart_frog
 build/
