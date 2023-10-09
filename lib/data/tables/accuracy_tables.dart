@@ -1,8 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:university_io_backend/tables/exams.dart';
-import 'package:university_io_backend/tables/groups.dart';
-import 'package:university_io_backend/tables/students.dart';
-import 'package:university_io_backend/tables/subjects.dart';
+import 'package:university_io_backend/data/tables/tables.dart';
 
 class AccuracyTables extends Table {
   IntColumn get id => integer().autoIncrement()();

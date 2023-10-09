@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:university_io_backend/tables/groups.dart';
+import 'package:university_io_backend/data/tables/groups.dart';
 
 class Students extends Table {
   IntColumn get id => integer().autoIncrement()();

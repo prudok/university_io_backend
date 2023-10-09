@@ -1,8 +1,23 @@
 //GENERATED BARREL FILE
-export 'book.dart';
+export 'accuracy_tables.dart';
+export 'alliances.dart';
+export 'books.dart';
+export 'classrooms.dart';
 export 'department_teacher_link.dart';
 export 'departments.dart';
 export 'events.dart';
+export 'exams.dart';
+export 'g_t_o.dart';
+export 'groups.dart';
+export 'libraries.dart';
+export 'marks.dart';
+export 'news.dart';
 export 'projects.dart';
+export 'schedules.dart';
+export 'sport_teams.dart';
 export 'students.dart';
+export 'subjects.dart';
+export 'syllabus.dart';
 export 'teachers.dart';
+export 'torches.dart';
+export 'university_dormitories.dart';

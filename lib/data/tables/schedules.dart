@@ -1,8 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:university_io_backend/tables/classrooms.dart';
-import 'package:university_io_backend/tables/groups.dart';
-import 'package:university_io_backend/tables/subjects.dart';
-import 'package:university_io_backend/tables/tables.dart';
+import 'package:university_io_backend/data/tables/tables.dart';
 
 class Schedules extends Table {
   IntColumn get id => integer().autoIncrement()();
