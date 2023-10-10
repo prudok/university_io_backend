@@ -1,4 +1,5 @@
 import 'package:drift/drift.dart';
+import 'package:university_io_backend/data/tables/tables.dart';
 
 class Teachers extends Table {
   IntColumn get id => integer().autoIncrement()();
@@ -6,4 +7,5 @@ class Teachers extends Table {
   TextColumn get lastName => text()();
   TextColumn get email => text()();
   TextColumn get gender => text()();
+  IntColumn get departmentId => integer().references(Departments, #id)();
 }
