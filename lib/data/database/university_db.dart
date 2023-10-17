@@ -63,6 +63,8 @@ class UniversityDatabase extends _$UniversityDatabase {
 
   Future<List<Department>> get departmentsList => select(departments).get();
 
+  Future<List<AccuracyTable>> get accuracyTablesList => select(accuracyTables).get();
+
   // DELETE queries
   Future<int> deleteTeacher(int id) async {
     return (delete(teachers)..where((t) => t.id.equals(id))).go();
@@ -82,6 +84,10 @@ class UniversityDatabase extends _$UniversityDatabase {
 
   Future<int> deleteDepartment(int id) async {
     return (delete(departments)..where((d) => d.id.equals(id))).go();
+  }
+
+  Future<int> deleteDepartment(int id) async {
+    return (delete(accuracyTables)..where((d) => d.id.equals(id))).go();
   }
 }
 
