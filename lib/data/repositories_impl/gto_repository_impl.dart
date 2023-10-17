@@ -1,15 +1,15 @@
 import 'package:injectable/injectable.dart';
 import 'package:university_io_backend/data/database/university_db.dart';
-import 'package:university_io_backend/domain/repositories/gto_repository.dart';
+import 'package:university_io_backend/domain/repositories/repositories.dart';
 
 @singleton
-class GtoRepositoryImpl extends GtoRepository {
-  GtoRepositoryImpl({required UniversityDatabase db}) : _db = db;
+class GTORepositoryImpl extends GTORepository {
+  GTORepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(GtoCompanion gto) async {
+  Future<void> add(GTOsCompanion gto) async {
     await _db.into(_db.gto).insert(gto);
   }
 

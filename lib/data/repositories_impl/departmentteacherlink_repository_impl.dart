@@ -3,7 +3,7 @@ import 'package:university_io_backend/data/database/university_db.dart';
 import 'package:university_io_backend/domain/repositories/departmentteacherlink_repository.dart';
 
 @singleton
-class DepartmentteacherlinkRepositoryImpl extends DepartmentteacherlinkRepository {
+class DepartmenteacherlinkRepositoryImpl extends DepartmentteacherlinkRepository {
   DepartmentteacherlinkRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;

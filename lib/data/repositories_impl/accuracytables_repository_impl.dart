@@ -3,8 +3,8 @@ import 'package:university_io_backend/data/database/university_db.dart';
 import 'package:university_io_backend/domain/repositories/accuracy_table_repository.dart';
 
 @singleton
-class AccuracytableRepositoryImpl extends AccuracyTableRepository {
-  AccuracytableRepositoryImpl({required UniversityDatabase db}) : _db = db;
+class AccuracyTableRepositoryImpl extends AccuracyTableRepository {
+  AccuracyTableRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
 
@@ -19,12 +19,12 @@ class AccuracytableRepositoryImpl extends AccuracyTableRepository {
   }
 
   @override
-  Future<Accuracytable> get(int id) {
+  Future<AccuracyTable> get(int id) {
     throw UnimplementedError();
   }
 
   @override
-  Future<List<Accuracytable>> getAll() {
+  Future<List<AccuracyTable>> getAll() {
     return _db.accuracytablesList;
   }
 }
