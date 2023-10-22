@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
 import 'package:university_io_backend/data/database/university_db.dart';
-import 'package:university_io_backend/domain/repositories/universitydormitory_repository.dart';
+import 'package:university_io_backend/domain/repositories/university_dormitory_repository.dart';
 
 @singleton
 class UniversityDormitoryRepositoryImpl extends UniversityDormitoryRepository {
