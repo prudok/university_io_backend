@@ -4,6 +4,6 @@ import 'package:university_io_backend/data/repositories_impl/repositories_impl.d
 
 Handler middleware(Handler handler) {
   return handler.use(
-    provider<VolunteeringRepositoryImpl>((context) => getIt.get<VolunteeringRepositoryImpl>()),
+    provider<GTORepositoryImpl>((context) => getIt.get<GTORepositoryImpl>()),
   );
 }

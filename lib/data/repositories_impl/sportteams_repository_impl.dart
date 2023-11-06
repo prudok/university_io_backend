@@ -3,8 +3,8 @@ import 'package:university_io_backend/data/database/university_db.dart';
 import 'package:university_io_backend/domain/repositories/department_repository.dart';
 
 @singleton
-class SportteamRepositoryImpl extends DepartmentRepository {
-  SportteamRepositoryImpl({required UniversityDatabase db}) : _db = db;
+class SportTeamRepositoryImpl extends DepartmentRepository {
+  SportTeamRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
 

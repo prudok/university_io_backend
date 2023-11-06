@@ -1,15 +1,15 @@
 import 'package:injectable/injectable.dart';
 import 'package:university_io_backend/data/database/university_db.dart';
-import 'package:university_io_backend/domain/repositories/departmentteacherlink_repository.dart';
+import 'package:university_io_backend/domain/repositories/departmentTeacherLink_repository.dart';
 
 @singleton
-class DepartmenteacherlinkRepositoryImpl extends DepartmentteacherlinkRepository {
-  DepartmentteacherlinkRepositoryImpl({required UniversityDatabase db}) : _db = db;
+class DepartmentTeacherLinkRepositoryImpl extends DepartmentTeacherLinkRepository {
+  DepartmentTeacherLinkRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(DepartmentteacherlinksCompanion departmentteacherlink) async {
+  Future<void> add(DepartmentteacherlinksCompanion departmentTeacherLink) async {
     await _db.into(_db.departmentteacherlinks).insert(departmentteacherlink);
   }
 
