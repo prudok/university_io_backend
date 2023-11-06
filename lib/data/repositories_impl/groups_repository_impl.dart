@@ -1,15 +1,15 @@
 import 'package:injectable/injectable.dart';
 import 'package:university_io_backend/data/database/university_db.dart';
-import 'package:university_io_backend/domain/repositories/department_repository.dart';
+import 'package:university_io_backend/domain/repositories/repositories.dart';
 
 @singleton
-class GroupRepositoryImpl extends DepartmentRepository {
+class GroupRepositoryImpl extends GroupRepository {
   GroupRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(DepartmentsCompanion group) async {
+  Future<void> add(GroupsCompanion group) async {
     await _db.into(_db.groups).insert(group);
   }
 
@@ -19,12 +19,12 @@ class GroupRepositoryImpl extends DepartmentRepository {
   }
 
   @override
-  Future<Department> get(int id) {
+  Future<Group> get(int id) {
     throw UnimplementedError();
   }
 
   @override
-  Future<List<Department>> getAll() {
+  Future<List<Group>> getAll() {
     return _db.groupsList;
   }
 }

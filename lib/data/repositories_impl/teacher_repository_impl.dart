@@ -9,9 +9,8 @@ class TeacherRepositoryImpl extends TeacherRepository {
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(TeachersCompanion teacher, DepartmentTeacherLinksCompanion department) async {
+  Future<void> add(TeachersCompanion teacher) async {
     await _db.into(_db.teachers).insert(teacher);
-    await _db.into(_db.departmentTeacherLinks).insert(department);
   }
 
   @override

@@ -10,21 +10,21 @@ class GTORepositoryImpl extends GTORepository {
 
   @override
   Future<void> add(GTOsCompanion gto) async {
-    await _db.into(_db.gto).insert(gto);
+    await _db.into(_db.gTOs).insert(gto);
   }
 
   @override
   Future<void> delete(int id) async {
-    await _db.deleteGto(id);
+    await _db.deleteGTO(id);
   }
 
   @override
-  Future<Gto> get(int id) {
+  Future<GTO> get(int id) {
     throw UnimplementedError();
   }
 
   @override
-  Future<List<Gto>> getAll() {
-    return _db.gtoList;
+  Future<List<GTO>> getAll() {
+    return _db.gTOsList;
   }
 }

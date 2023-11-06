@@ -5,7 +5,6 @@ import 'package:drift/native.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path/path.dart' as path;
 import 'package:university_io_backend/data/tables/tables.dart';
-import 'package:university_io_backend/domain/repositories/alliance_repository.dart';
 
 part 'university_db.g.dart';
 
@@ -72,8 +71,6 @@ class UniversityDatabase extends _$UniversityDatabase {
 
   Future<List<Classroom>> get classroomsList => select(classrooms).get();
 
-
-
   Future<List<Exam>> get examsList => select(exams).get();
 
   Future<List<Group>> get groupsList => select(groups).get();
@@ -104,8 +101,7 @@ class UniversityDatabase extends _$UniversityDatabase {
 
   Future<List<OVolunteering>> get volunteeringList => select(volunteering).get();
 
-
-
+  Future<List<DepartmentTeacherLink>> get departmentTeacherLinksList => select(departmentTeacherLinks).get();
 
   // DELETE queries
   Future<int> deleteTeacher(int id) async {
@@ -199,7 +195,6 @@ class UniversityDatabase extends _$UniversityDatabase {
   Future<int> deleteVolunteering(int id) async {
     return (delete(volunteering)..where((s) => s.id.equals(id))).go();
   }
-
 }
 
 LazyDatabase _openConnection() {

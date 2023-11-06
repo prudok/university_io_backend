@@ -1,7 +1,7 @@
 import 'package:university_io_backend/data/database/university_db.dart';
 
 abstract class TeacherRepository {
-  Future<void> add(TeachersCompanion teacher, DepartmentTeacherLinksCompanion department);
+  Future<void> add(TeachersCompanion teacher);
 
   Future<void> delete(int id);
 

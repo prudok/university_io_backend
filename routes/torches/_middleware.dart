@@ -4,6 +4,6 @@ import 'package:university_io_backend/data/repositories_impl/repositories_impl.d
 
 Handler middleware(Handler handler) {
   return handler.use(
-    provider<TorchRepositoryImpl>((context) => getIt.get<TorchRepositoryImpl>()),
+    provider<TorchesRepositoryImpl>((context) => getIt.get<TorchesRepositoryImpl>()),
   );
 }

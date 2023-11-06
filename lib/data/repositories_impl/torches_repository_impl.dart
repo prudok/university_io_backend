@@ -1,10 +1,10 @@
 import 'package:injectable/injectable.dart';
 import 'package:university_io_backend/data/database/university_db.dart';
-import 'package:university_io_backend/domain/repositories/department_repository.dart';
+import 'package:university_io_backend/domain/repositories/repositories.dart';
 
 @singleton
-class TorchRepositoryImpl extends TorchRepository {
-  TorchRepositoryImpl({required UniversityDatabase db}) : _db = db;
+class TorchesRepositoryImpl extends TorchesRepository {
+  TorchesRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
 

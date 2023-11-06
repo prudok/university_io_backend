@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:university_io_backend/data/database/university_db.dart';
-import 'package:university_io_backend/domain/repositories/sport_activities_repository.dart';
+import 'package:university_io_backend/domain/repositories/repositories.dart';
 
 @singleton
-class SportActivitiesRepositoryImpl extends SportActivitiesRepository {
+class SportActivitiesRepositoryImpl extends SportActivityRepository {
   SportActivitiesRepositoryImpl({required UniversityDatabase db}) : _db = db;
 
   final UniversityDatabase _db;
@@ -14,11 +14,6 @@ class SportActivitiesRepositoryImpl extends SportActivitiesRepository {
   }
 
   @override
-  Future<void> delete(int id) async {
-    await _db.deleteSportActivity(id);
-  }
-
-  @override
   Future<SportActivity> get(int id) {
     throw UnimplementedError();
   }
@@ -26,5 +21,10 @@ class SportActivitiesRepositoryImpl extends SportActivitiesRepository {
   @override
   Future<List<SportActivity>> getAll() {
     return _db.sportActivitiesList;
+  }
+
+  @override
+  Future<void> delete(int id) {
+    throw UnimplementedError();
   }
 }

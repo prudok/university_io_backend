@@ -19,12 +19,12 @@ class SyllabusRepositoryImpl extends SyllabusRepository {
   }
 
   @override
-  Future<Syllabus> get(int id) {
+  Future<Syllabu> get(int id) {
     throw UnimplementedError();
   }
 
   @override
-  Future<List<Syllabus>> getAll() {
-    return _db.syllabusList;
+  Future<List<Syllabu>> getAll() {
+    return _db.syllabusesList;
   }
 }

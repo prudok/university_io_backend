@@ -9,22 +9,22 @@ class NewsRepositoryImpl extends NewsRepository {
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(DepartmentsCompanion department) async {
-    await _db.into(_db.news).insert(department);
+  Future<void> add(NewsCompanion news) async {
+    await _db.into(_db.news).insert(news);
   }
 
   @override
   Future<void> delete(int id) async {
-    await _db.deleteNews(id);
+    await _db.deleteNew(id);
   }
 
   @override
-  Future<Department> get(int id) {
+  Future<FNews> get(int id) {
     throw UnimplementedError();
   }
 
   @override
-  Future<List<Department>> getAll() {
+  Future<List<FNews>> getAll() {
     return _db.newsList;
   }
 }

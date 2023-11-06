@@ -25,6 +25,6 @@ class AccuracyTableRepositoryImpl extends AccuracyTableRepository {
 
   @override
   Future<List<AccuracyTable>> getAll() {
-    return _db.accuracytablesList;
+    return _db.accuracyTablesList;
   }
 }

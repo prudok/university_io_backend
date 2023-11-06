@@ -9,8 +9,8 @@ class ExamRepositoryImpl extends ExamRepository {
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(DepartmentsCompanion department) async {
-    await _db.into(_db.exams).insert(department);
+  Future<void> add(ExamsCompanion exam) async {
+    await _db.into(_db.exams).insert(exam);
   }
 
   @override

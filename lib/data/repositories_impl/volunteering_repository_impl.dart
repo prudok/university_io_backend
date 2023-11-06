@@ -9,7 +9,7 @@ class VolunteeringRepositoryImpl extends VolunteeringRepository {
   final UniversityDatabase _db;
 
   @override
-  Future<void> add(DepartmentsCompanion volunteering) async {
+  Future<void> add(VolunteeringCompanion volunteering) async {
     await _db.into(_db.volunteering).insert(volunteering);
   }
 
@@ -19,12 +19,12 @@ class VolunteeringRepositoryImpl extends VolunteeringRepository {
   }
 
   @override
-  Future<Volunteering> get(int id) {
+  Future<OVolunteering> get(int id) {
     throw UnimplementedError();
   }
 
   @override
-  Future<List<Volunteering>> getAll() {
+  Future<List<OVolunteering>> getAll() {
     return _db.volunteeringList;
   }
 }
