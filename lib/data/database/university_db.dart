@@ -4,7 +4,7 @@ import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path/path.dart' as path;
-import 'package:university_io_backend/data/tables/tables.dart';
+import 'package:university_io_entities/university_io_entities.dart';
 
 part 'university_db.g.dart';
 
